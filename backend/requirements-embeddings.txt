@@ -1,0 +1,6 @@
+# OPTIONAL — the local neural embedding model (the intended default retriever).
+# Installing these pulls PyTorch (large). On first use, the model weights are
+# downloaded from the Hugging Face hub, so this path needs one-time network access
+# to that host. Without these packages (or without that access) ControlGap
+# automatically uses the TF-IDF fallback and says so in the UI.
+sentence-transformers==3.3.1

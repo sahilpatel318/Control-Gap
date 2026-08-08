@@ -1,0 +1,233 @@
+{
+  "standard_id": "wcag22",
+  "standard_name": "WCAG 2.2 (selected success criteria)",
+  "source_note": "Success-criterion identifiers, titles, and conformance levels are factual references to the W3C Web Content Accessibility Guidelines (WCAG) 2.2 Recommendation. The 'text' field is an original, concise paraphrase written for this proof-of-concept, NOT a verbatim copy of the normative W3C text. Consult the official W3C Recommendation for authoritative wording.",
+  "source_url": "https://www.w3.org/TR/WCAG22/",
+  "requirements": [
+    {
+      "requirement_id": "WCAG-1.1.1",
+      "ref": "1.1.1",
+      "title": "Non-text Content",
+      "level": "A",
+      "principle": "Perceivable",
+      "text": "All non-text content presented to the user has a text alternative that serves an equivalent purpose, except for defined cases such as decorative content, controls, or CAPTCHA where specific rules apply.",
+      "keywords": ["alt text", "text alternative", "images", "icons", "non-text", "decorative"]
+    },
+    {
+      "requirement_id": "WCAG-1.2.2",
+      "ref": "1.2.2",
+      "title": "Captions (Prerecorded)",
+      "level": "A",
+      "principle": "Perceivable",
+      "text": "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
+      "keywords": ["captions", "video", "audio", "synchronized media", "subtitles", "prerecorded"]
+    },
+    {
+      "requirement_id": "WCAG-1.3.1",
+      "ref": "1.3.1",
+      "title": "Info and Relationships",
+      "level": "A",
+      "principle": "Perceivable",
+      "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text, so that assistive technology can interpret headings, lists, tables, and form relationships.",
+      "keywords": ["semantic", "structure", "headings", "markup", "relationships", "programmatically determined"]
+    },
+    {
+      "requirement_id": "WCAG-1.3.5",
+      "ref": "1.3.5",
+      "title": "Identify Input Purpose",
+      "level": "AA",
+      "principle": "Perceivable",
+      "text": "The purpose of each input field that collects information about the user can be programmatically determined when the field serves a common purpose (for example via autocomplete attributes), enabling autofill and personalization.",
+      "keywords": ["input purpose", "autocomplete", "form fields", "autofill", "personal data"]
+    },
+    {
+      "requirement_id": "WCAG-1.4.1",
+      "ref": "1.4.1",
+      "title": "Use of Color",
+      "level": "A",
+      "principle": "Perceivable",
+      "text": "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
+      "keywords": ["color", "not color alone", "indicator", "status", "visual cue"]
+    },
+    {
+      "requirement_id": "WCAG-1.4.3",
+      "ref": "1.4.3",
+      "title": "Contrast (Minimum)",
+      "level": "AA",
+      "principle": "Perceivable",
+      "text": "Text and images of text have a contrast ratio of at least 4.5:1, except for large text (3:1), incidental text, and logotypes.",
+      "keywords": ["contrast", "contrast ratio", "text color", "4.5:1", "readability"]
+    },
+    {
+      "requirement_id": "WCAG-1.4.4",
+      "ref": "1.4.4",
+      "title": "Resize Text",
+      "level": "AA",
+      "principle": "Perceivable",
+      "text": "Text can be resized without assistive technology up to 200 percent without loss of content or functionality, except for captions and images of text.",
+      "keywords": ["resize", "zoom", "text scaling", "200 percent", "reflow"]
+    },
+    {
+      "requirement_id": "WCAG-1.4.11",
+      "ref": "1.4.11",
+      "title": "Non-text Contrast",
+      "level": "AA",
+      "principle": "Perceivable",
+      "text": "Visual information required to identify user-interface components and states, and meaningful graphical objects, has a contrast ratio of at least 3:1 against adjacent colors.",
+      "keywords": ["non-text contrast", "ui component contrast", "3:1", "borders", "focus indicator contrast", "icons"]
+    },
+    {
+      "requirement_id": "WCAG-2.1.1",
+      "ref": "2.1.1",
+      "title": "Keyboard",
+      "level": "A",
+      "principle": "Operable",
+      "text": "All functionality is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires path-dependent input.",
+      "keywords": ["keyboard", "keyboard operable", "no mouse", "tab", "focus", "accessible interaction"]
+    },
+    {
+      "requirement_id": "WCAG-2.1.2",
+      "ref": "2.1.2",
+      "title": "No Keyboard Trap",
+      "level": "A",
+      "principle": "Operable",
+      "text": "If keyboard focus can be moved to a component, it can also be moved away using only the keyboard, and the user is advised of any non-standard method to move focus.",
+      "keywords": ["keyboard trap", "focus escape", "modal", "focus management"]
+    },
+    {
+      "requirement_id": "WCAG-2.4.1",
+      "ref": "2.4.1",
+      "title": "Bypass Blocks",
+      "level": "A",
+      "principle": "Operable",
+      "text": "A mechanism is available to bypass blocks of content that are repeated on multiple pages, such as a skip-to-content link or proper landmark structure.",
+      "keywords": ["skip link", "bypass blocks", "landmarks", "skip navigation", "repeated content"]
+    },
+    {
+      "requirement_id": "WCAG-2.4.3",
+      "ref": "2.4.3",
+      "title": "Focus Order",
+      "level": "A",
+      "principle": "Operable",
+      "text": "If a page can be navigated sequentially and the sequence affects meaning or operability, focusable components receive focus in an order that preserves meaning and operability.",
+      "keywords": ["focus order", "tab order", "sequential navigation", "reading order"]
+    },
+    {
+      "requirement_id": "WCAG-2.4.4",
+      "ref": "2.4.4",
+      "title": "Link Purpose (In Context)",
+      "level": "A",
+      "principle": "Operable",
+      "text": "The purpose of each link can be determined from the link text alone or together with its programmatically determined link context, except where the purpose would be ambiguous to users in general.",
+      "keywords": ["link purpose", "link text", "descriptive links", "read more", "context"]
+    },
+    {
+      "requirement_id": "WCAG-2.4.7",
+      "ref": "2.4.7",
+      "title": "Focus Visible",
+      "level": "AA",
+      "principle": "Operable",
+      "text": "Any keyboard-operable user interface has a mode of operation in which the keyboard focus indicator is visible.",
+      "keywords": ["focus visible", "focus indicator", "keyboard focus", "outline", "focus ring"]
+    },
+    {
+      "requirement_id": "WCAG-2.4.11",
+      "ref": "2.4.11",
+      "title": "Focus Not Obscured (Minimum)",
+      "level": "AA",
+      "principle": "Operable",
+      "text": "When a user-interface component receives keyboard focus, the component is not entirely hidden by author-created content such as sticky headers, footers, or overlays. (New in WCAG 2.2.)",
+      "keywords": ["focus not obscured", "sticky header", "overlay", "focus hidden", "new 2.2"]
+    },
+    {
+      "requirement_id": "WCAG-2.5.3",
+      "ref": "2.5.3",
+      "title": "Label in Name",
+      "level": "A",
+      "principle": "Operable",
+      "text": "For components with a label that includes text or images of text, the accessible name contains the visible label text, so speech-input users can activate controls by their visible name.",
+      "keywords": ["label in name", "accessible name", "speech input", "visible label"]
+    },
+    {
+      "requirement_id": "WCAG-2.5.7",
+      "ref": "2.5.7",
+      "title": "Dragging Movements",
+      "level": "AA",
+      "principle": "Operable",
+      "text": "All functionality that uses a dragging movement can be operated by a single pointer without dragging, unless dragging is essential. (New in WCAG 2.2.)",
+      "keywords": ["dragging", "single pointer", "drag and drop", "reorder", "new 2.2"]
+    },
+    {
+      "requirement_id": "WCAG-2.5.8",
+      "ref": "2.5.8",
+      "title": "Target Size (Minimum)",
+      "level": "AA",
+      "principle": "Operable",
+      "text": "Targets for pointer input are at least 24 by 24 CSS pixels, except where spacing, inline, essential, or user-agent-controlled exceptions apply. (New in WCAG 2.2.)",
+      "keywords": ["target size", "touch target", "24 pixels", "tap target", "hit area", "new 2.2"]
+    },
+    {
+      "requirement_id": "WCAG-3.1.1",
+      "ref": "3.1.1",
+      "title": "Language of Page",
+      "level": "A",
+      "principle": "Understandable",
+      "text": "The default human language of each web page can be programmatically determined, typically via a lang attribute on the root element.",
+      "keywords": ["language", "lang attribute", "page language", "localization"]
+    },
+    {
+      "requirement_id": "WCAG-3.2.2",
+      "ref": "3.2.2",
+      "title": "On Input",
+      "level": "A",
+      "principle": "Understandable",
+      "text": "Changing the setting of a user-interface component does not automatically cause a change of context unless the user has been advised of the behavior beforehand.",
+      "keywords": ["on input", "change of context", "auto submit", "unexpected navigation"]
+    },
+    {
+      "requirement_id": "WCAG-3.3.1",
+      "ref": "3.3.1",
+      "title": "Error Identification",
+      "level": "A",
+      "principle": "Understandable",
+      "text": "If an input error is automatically detected, the item in error is identified and the error is described to the user in text.",
+      "keywords": ["error identification", "form errors", "validation", "error message"]
+    },
+    {
+      "requirement_id": "WCAG-3.3.2",
+      "ref": "3.3.2",
+      "title": "Labels or Instructions",
+      "level": "A",
+      "principle": "Understandable",
+      "text": "Labels or instructions are provided when content requires user input, so users understand what information is expected.",
+      "keywords": ["labels", "instructions", "form labels", "field help", "placeholder"]
+    },
+    {
+      "requirement_id": "WCAG-3.3.7",
+      "ref": "3.3.7",
+      "title": "Redundant Entry",
+      "level": "A",
+      "principle": "Understandable",
+      "text": "Information previously entered by or provided to the user that is required again in the same process is auto-populated or available to select, except where re-entry is essential. (New in WCAG 2.2.)",
+      "keywords": ["redundant entry", "re-enter", "autofill previous", "multi-step form", "new 2.2"]
+    },
+    {
+      "requirement_id": "WCAG-3.3.8",
+      "ref": "3.3.8",
+      "title": "Accessible Authentication (Minimum)",
+      "level": "AA",
+      "principle": "Understandable",
+      "text": "A cognitive function test (such as remembering a password or solving a puzzle) is not required for any authentication step unless an alternative, a mechanism to assist, object recognition, or personal-content recognition is available. (New in WCAG 2.2.)",
+      "keywords": ["accessible authentication", "cognitive test", "password", "captcha", "login", "new 2.2"]
+    },
+    {
+      "requirement_id": "WCAG-4.1.2",
+      "ref": "4.1.2",
+      "title": "Name, Role, Value",
+      "level": "A",
+      "principle": "Robust",
+      "text": "For all user-interface components, the name and role can be programmatically determined; states, properties, and values can be set and changes are available to assistive technologies (commonly satisfied with correct native semantics or ARIA).",
+      "keywords": ["name role value", "aria", "custom components", "assistive technology", "state"]
+    }
+  ]
+}

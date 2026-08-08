@@ -1,0 +1,174 @@
+{
+  "org_name": "Northwind Digital (synthetic mid-size SaaS company)",
+  "source_note": "ALL controls below are SYNTHETIC and fabricated for demonstration. They do not describe any real organization and must not be used as a real control library. Coverage is deliberately uneven: some requirements are fully covered, some partially, and some have no control at all.",
+  "controls": [
+    {
+      "control_id": "ACC-01",
+      "title": "Alternative Text Standard",
+      "owner": "Design System Team",
+      "category": "Accessibility",
+      "text": "Every meaningful image, icon, and non-text UI element shipped in the product must have a text alternative that conveys its purpose. Decorative images must be marked as decorative (empty alt or aria-hidden) so screen readers skip them. Component library images fail CI review if an alt value is missing. This standard applies to all product surfaces and marketing pages.",
+      "tags": ["alt text", "images", "icons", "screen reader"]
+    },
+    {
+      "control_id": "ACC-02",
+      "title": "Video and Media Publishing SOP",
+      "owner": "Content Marketing",
+      "category": "Accessibility",
+      "text": "The content team should try to add captions to customer-facing product videos when time allows before publication. Captioning is currently a best-effort activity and is not yet mandatory for all prerecorded media; a backlog of older videos remains uncaptioned. Audio-only content and live media are out of scope for this SOP.",
+      "tags": ["captions", "video", "media", "prerecorded"]
+    },
+    {
+      "control_id": "ACC-03",
+      "title": "Semantic Markup Guideline",
+      "owner": "Frontend Guild",
+      "category": "Accessibility",
+      "text": "Engineers must use native semantic HTML elements for headings, lists, tables, and form fields so that document structure and relationships are programmatically available to assistive technology. Data tables must use header cells with scope. Where native semantics are insufficient, ARIA roles may be added following the design-system ARIA guidance.",
+      "tags": ["semantic html", "structure", "headings", "tables", "relationships"]
+    },
+    {
+      "control_id": "ACC-04",
+      "title": "Color and Contrast Standard",
+      "owner": "Design System Team",
+      "category": "Accessibility",
+      "text": "All text in the product must meet a minimum contrast ratio of 4.5:1 against its background (3:1 for large text). Approved palette tokens are pre-checked for text contrast. This standard covers text contrast only; contrast requirements for icons, control borders, and focus indicators are not yet defined here.",
+      "tags": ["contrast", "color", "text contrast", "4.5:1", "palette"]
+    },
+    {
+      "control_id": "ACC-05",
+      "title": "Keyboard Operability Policy",
+      "owner": "Frontend Guild",
+      "category": "Accessibility",
+      "text": "All interactive functionality must be fully operable using a keyboard alone, with no reliance on mouse-only interactions. Custom widgets must implement documented keyboard patterns. Focus must never become trapped: users must always be able to move focus into and out of any component, including modal dialogs, using standard keys.",
+      "tags": ["keyboard", "keyboard operable", "focus trap", "modal", "widgets"]
+    },
+    {
+      "control_id": "ACC-06",
+      "title": "Focus Indicator Design Tokens",
+      "owner": "Design System Team",
+      "category": "Accessibility",
+      "text": "The design system provides a standard focus-ring token that components should apply so that the keyboard focus indicator is visible on interactive elements. Adoption across legacy components is partial and some older components still suppress the outline. The token addresses focus visibility; it does not address focus order or focus being covered by sticky overlays.",
+      "tags": ["focus visible", "focus ring", "focus indicator", "design tokens"]
+    },
+    {
+      "control_id": "ACC-07",
+      "title": "Form Design Guideline",
+      "owner": "UX Team",
+      "category": "Accessibility",
+      "text": "Every form field must have a persistent visible label describing the expected input; placeholder text must not be used as the only label. Instructions and format hints are shown near the relevant field. The guideline recommends, but does not require, autocomplete attributes that identify the purpose of fields collecting personal information.",
+      "tags": ["labels", "form", "instructions", "autocomplete", "input purpose"]
+    },
+    {
+      "control_id": "ACC-08",
+      "title": "Form Error Handling Standard",
+      "owner": "UX Team",
+      "category": "Accessibility",
+      "text": "When form validation fails, the specific field in error must be identified and a clear text message must describe what went wrong and how to correct it. Error messages must be associated with their field programmatically and announced to assistive technology. Errors must not be indicated by color change alone.",
+      "tags": ["error identification", "validation", "form errors", "error message"]
+    },
+    {
+      "control_id": "ACC-09",
+      "title": "Skip Navigation Requirement",
+      "owner": "Frontend Guild",
+      "category": "Accessibility",
+      "text": "Every page must provide a keyboard-accessible skip link as the first focusable element allowing users to bypass repeated navigation and jump to the main content region. Pages must also expose landmark regions (header, nav, main, footer).",
+      "tags": ["skip link", "bypass blocks", "landmarks", "navigation"]
+    },
+    {
+      "control_id": "ACC-10",
+      "title": "ARIA and Custom Component Standard",
+      "owner": "Frontend Guild",
+      "category": "Accessibility",
+      "text": "Custom interactive components must expose a correct name, role, and value to assistive technologies, and must communicate state changes (expanded, selected, checked, disabled) via appropriate ARIA attributes kept in sync with the visual state. Prefer native elements before ARIA.",
+      "tags": ["name role value", "aria", "custom components", "state", "assistive technology"]
+    },
+    {
+      "control_id": "ACC-11",
+      "title": "Page Language Declaration",
+      "owner": "Frontend Guild",
+      "category": "Accessibility",
+      "text": "Every rendered page must declare its default human language using a lang attribute on the html element so assistive technology can select the correct pronunciation and voice.",
+      "tags": ["language", "lang attribute", "page language"]
+    },
+    {
+      "control_id": "ENG-01",
+      "title": "Touch Target Sizing Guideline",
+      "owner": "Mobile Engineering",
+      "category": "Engineering",
+      "text": "On mobile web and native apps, primary tap targets should be at least 44x44 points. This guideline applies to mobile surfaces; it does not currently specify a minimum target size for pointer targets on the desktop web product.",
+      "tags": ["touch target", "target size", "tap target", "mobile"]
+    },
+    {
+      "control_id": "QA-01",
+      "title": "Accessibility Testing Checklist",
+      "owner": "Quality Assurance",
+      "category": "Accessibility",
+      "text": "Before a release, QA runs an automated accessibility scan and a manual checklist covering keyboard navigation, visible focus, image alternatives, form labels, and color contrast. The checklist is a detective control and does not by itself guarantee remediation; findings are logged as tickets and prioritized by severity.",
+      "tags": ["testing", "qa", "checklist", "accessibility scan", "detective"]
+    },
+    {
+      "control_id": "SEC-01",
+      "title": "Access Control Policy",
+      "owner": "Information Security",
+      "category": "Security",
+      "text": "Access to systems processing personal or confidential data is granted on a least-privilege, role-based basis. Access is reviewed quarterly, revoked on offboarding, and protected by multi-factor authentication. Administrative access requires approval and is logged.",
+      "tags": ["access control", "least privilege", "rbac", "mfa", "authentication", "security"]
+    },
+    {
+      "control_id": "SEC-02",
+      "title": "Security Incident Response Plan",
+      "owner": "Information Security",
+      "category": "Security",
+      "text": "Suspected security incidents are triaged by the incident response team against a severity matrix. For incidents involving personal data, the plan requires assessing whether individuals are at risk and, where required, notifying the relevant supervisory authority without undue delay and no later than 72 hours after the company becomes aware. The plan covers authority notification; direct communication to affected individuals is handled case-by-case and is not fully proceduralized.",
+      "tags": ["incident response", "breach", "72 hours", "supervisory authority", "notification"]
+    },
+    {
+      "control_id": "SEC-03",
+      "title": "Encryption and Key Management Standard",
+      "owner": "Information Security",
+      "category": "Security",
+      "text": "Personal and confidential data must be encrypted in transit (TLS 1.2+) and at rest (AES-256). Encryption keys are managed in a dedicated key management service with rotation and restricted access. Backups are encrypted and periodically restore-tested.",
+      "tags": ["encryption", "tls", "aes", "key management", "at rest", "in transit", "security"]
+    },
+    {
+      "control_id": "PRIV-01",
+      "title": "Data Subject Request SOP",
+      "owner": "Privacy Office",
+      "category": "Privacy",
+      "text": "Requests from individuals to access or delete their personal data are logged in the privacy request tracker, verified for identity, and fulfilled within one calendar month. The SOP covers both access requests (providing a copy of the data held) and erasure requests (deleting data where no lawful ground to retain applies), and records the outcome for accountability.",
+      "tags": ["data subject request", "access", "erasure", "deletion", "SAR", "privacy"]
+    },
+    {
+      "control_id": "PRIV-02",
+      "title": "Records of Processing Register",
+      "owner": "Privacy Office",
+      "category": "Privacy",
+      "text": "The Privacy Office maintains a central register of processing activities recording, for each activity, the purpose, categories of personal data and data subjects, recipients, international transfers, retention period, and a reference to applicable security measures. The register is reviewed twice a year.",
+      "tags": ["records of processing", "ropa", "register", "purposes", "retention", "documentation"]
+    },
+    {
+      "control_id": "PRIV-03",
+      "title": "Privacy Impact Assessment Procedure",
+      "owner": "Privacy Office",
+      "category": "Privacy",
+      "text": "New products or features that may involve high-risk processing should be flagged to the Privacy Office, which may request a privacy impact assessment. Completion of an assessment before launch is encouraged but is not consistently enforced through a release gate, so some high-risk launches proceed without a documented assessment.",
+      "tags": ["dpia", "impact assessment", "high risk", "privacy", "assessment"]
+    },
+    {
+      "control_id": "HR-01",
+      "title": "Employee Onboarding Policy",
+      "owner": "People Operations",
+      "category": "HR",
+      "text": "New employees complete onboarding within their first week, including equipment issuance, benefits enrollment, and a general code-of-conduct acknowledgement. This policy governs the onboarding workflow and does not address product accessibility or data-protection processing obligations.",
+      "tags": ["onboarding", "hr", "employees", "code of conduct"]
+    },
+    {
+      "control_id": "FIN-01",
+      "title": "Expense Approval Policy",
+      "owner": "Finance",
+      "category": "Finance",
+      "text": "Employee expenses above a defined threshold require manager approval and a valid receipt before reimbursement. Expense reports are reconciled monthly. This policy is unrelated to accessibility or personal-data processing and is included as a realistic distractor.",
+      "tags": ["expense", "finance", "approval", "reimbursement"]
+    }
+  ]
+}
