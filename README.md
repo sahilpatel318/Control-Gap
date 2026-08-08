@@ -1,4 +1,4 @@
-# ControlGap — Regulatory-Change → Control-Gap Mapper
+# ControlGap : Regulatory-Change → Control-Gap Mapper
 
 ControlGap takes the text of a public regulatory standard and a set of internal
 controls/SOPs, maps each **requirement** to the relevant **control(s)**, assesses
@@ -6,7 +6,7 @@ coverage, and produces a reviewable, exportable **gap register**. The gap regist
 is the product — this is a decision-support tool for a GRC analyst, **not** a
 chatbot.
 
-> **Disclaimer.** Decision-support only — **not legal or compliance advice**. The
+> **Disclaimer.** Decision-support only - **not legal or compliance advice**. The
 > bundled control library is **synthetic**. Every AI/stub proposal requires human
 > validation before any reliance. Standard requirement text bundled here is an
 > original paraphrase for demonstration, not the authoritative normative wording.
@@ -71,7 +71,7 @@ feature list:
    controls)      stable IDs) control)      TF-IDF)        per req)       ONLY over      a real substring)
                                                                           retrieved)
                                                               │
-                 frontend/ (React + Vite) ◀──── REST /api ────┘
+                 frontend/ (React + Vite) ◀──── REST /api ───┘
                  audit-workbench UI: register table (hero) + split pane
                  (requirement clause | candidates + assessment), review, export
 ```
@@ -79,7 +79,7 @@ feature list:
 **Pipeline steps (as required):**
 1. **Parse** requirements and controls into typed records with stable IDs
    (`parsing.py`).
-2. **Chunk by boundary** — one chunk per requirement clause / per control, **not**
+2. **Chunk by boundary**  one chunk per requirement clause / per control, **not**
    fixed-size windows (`chunking.py`). The natural unit of meaning in compliance
    mapping is a single clause; splitting it would break citation traceability.
 3. **Embed locally** with `sentence-transformers` (default `all-MiniLM-L6-v2`),
@@ -89,7 +89,7 @@ feature list:
    (`retrieval.py`).
 5. **Assess** each requirement against **only its retrieved candidates** with an
    LLM (Anthropic or OpenAI, key via env) or a deterministic **stub**
-   (`assessor.py`). The model never sees whole documents — only retrieved text.
+   (`assessor.py`). The model never sees whole documents only retrieved text.
 
 **Grounding guarantee.** After assessment, `verify_grounding()` checks that every
 cited `control_quote` is an **exact substring** of a retrieved candidate. Quotes
@@ -182,7 +182,7 @@ that would overfit a 25-item set and misrepresent quality.
 
 ---
 
-## Evaluation — real numbers (no invented figures)
+## Evaluation : real numbers (no invented figures)
 
 A small **hand-labeled** ground-truth set (`backend/data/eval_labels.json`) maps
 each WCAG requirement to its expected coverage status against the synthetic
@@ -190,7 +190,7 @@ controls. `app/eval.py` runs the **currently-configured** assessor + retriever
 against it and reports what actually happens. If you configure an LLM key and/or
 the neural embedder, re-run to measure that configuration.
 
-**Latest measured run — stub assessor + TF-IDF fallback (the no-key default):**
+**Latest measured run : stub assessor + TF-IDF fallback (the no-key default):**
 
 | Metric | Value |
 | --- | --- |
